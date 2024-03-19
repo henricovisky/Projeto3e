@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ativo extends Model
 {
-    use HasFactory;
+    // Nome da tabela no banco ativos_3e
+    protected $table = 'ativos';
+
+    // Lista dos atributos
+    protected $fillable = [
+        'nome',
+        'descricao',
+        'categoria',
+        'data_aquisicao',
+        'valor',
+        'localizacao',
+    ];
 }

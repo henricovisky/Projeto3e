@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ativos', function (Blueprint $table) { /* Criando tabela de ativos da 3e */
+        Schema::create('ativos', function (Blueprint $table) { // Criando tabela de ativos da 3e no banco ativos_3e
           $table->id();
           $table->string('nome');
           $table->longText('descricao');
@@ -21,7 +21,7 @@ return new class extends Migration
           $table->date('data_aquisicao');
           $table->decimal('valor', 10, 2);
           $table->string('localizacao');
-          $table->timestamps(); /* cria coluna com data de criação e atualização */
+          $table->timestamps(); // cria coluna com data de criação e atualização
         });
     }
 
