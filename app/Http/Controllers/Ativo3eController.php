@@ -1,7 +1,7 @@
 <?php
-/* Controller criado com o seguinte comando: 
+/* Controller criado com o seguinte comando:
 
-php artisan make: controller Ativo3eController --resource 
+php artisan make: controller Ativo3eController --resource
 
 para traser todo o esqueleto abaixo*/
 
@@ -44,7 +44,7 @@ class Ativo3eController extends Controller
     public function show($id)
     {
         $ativo = Ativo::findOrFail($id); // Busca o ativo pelo ID ou retorna mensagem de erro 404
-        return view('ativos.show', compact('ativo')); 
+        return view('ativos.show', compact('ativo'));
     }
 
     /**
@@ -53,7 +53,7 @@ class Ativo3eController extends Controller
     public function edit($id)
     {
         $ativo = Ativo::findOrFail($id); // Faz o mesmo que o anterior
-        return view('ativos.edit', compact('ativo')); 
+        return view('ativos.edit', compact('ativo'));
     }
 
     /**
@@ -71,8 +71,8 @@ class Ativo3eController extends Controller
      */
     public function destroy($id)
     {
-        $ativo = Ativo::findOrFail($id); 
+        $ativo = Ativo::findOrFail($id);
         $ativo->delete(); // Exclui o registro do banco
-        return redirect('/ativos'); 
+        return redirect('/ativos');
     }
 }

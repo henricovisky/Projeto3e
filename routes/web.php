@@ -20,15 +20,15 @@ use App\Http\Controllers\Ativo3eController;
 // Rotas de listagem e criação de ativos
 Route::get('/ativos', [Ativo3eController::class, 'index'])->name("ativos.index");
 
-Route::get('/ativos/create', [AtivoController::class, 'create'])->name("ativos.create"); // exibe um formulário de criação de ativos
+Route::get('/ativos/create', [Ativo3eController::class, 'create'])->name("ativos.create"); // exibe um formulário de criação de ativos
 
-Route::post('/ativos', [AtivoController::class, 'store'])->name("ativos.store"); // criação de um novo ativo
+Route::post('/ativos', [Ativo3eController::class, 'store'])->name("ativos.store"); // criação de um novo ativo
 
 // Rotas para exibir, atualizar e excluir ativos
-Route::get('/ativos/{id}', [AtivoController::class, 'show'])->name("ativos.show"); // exibe detalhes de um ativo 
+Route::get('/ativos/{id}', [Ativo3eController::class, 'show'])->name("ativos.show"); // exibe detalhes de um ativo
 
-Route::get('/ativos/{id}/edit', [AtivoController::class, 'edit'])->name("ativos.edit"); // exibe o formulário para edição de um ativo
+Route::get('/ativos/{id}/edit', [Ativo3eController::class, 'edit'])->name("ativos.edit"); // exibe o formulário para edição de um ativo
 
-Route::put('/ativos/{id}', [AtivoController::class, 'update'])->name("ativos.update"); // atualiza o um ativo indicado
+Route::put('/ativos/{id}', [Ativo3eController::class, 'update'])->name("ativos.update"); // atualiza o um ativo indicado
 
-Route::delete('/ativos/{id}/delete', [AtivoController::class, 'destroy'])->name("ativos.destroy"); // exclue o ativo
+Route::delete('/ativos/{id}/delete', [Ativo3eController::class, 'destroy'])->name("ativos.destroy"); // exclue o ativo
